@@ -1,26 +1,53 @@
-@media screen and (min-width: 772px) {
-  /* 1. Đặt chiều rộng div bằng 45% chiều rộng khung nhìn (vw) */
-  /* Cần đổi display sang inline-block để các div xếp hàng ngang được */
-  div {
-    width: 45vw;
-    display: inline-block;
-    vertical-align: top; /* Căn lề trên để các hộp đều nhau */
-  }
+/* Bố cục mặc định cho Mobile (Giao diện màn hình nhỏ) */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
 
-  /* 2. Giới hạn chiều cao tối đa của hình ảnh không quá 30% chiều cao khung nhìn (vh) */
-  img {
-    max-height: 30vh;
-    width: auto; /* Giữ nguyên tỷ lệ hình ảnh */
-  }
+h1 {
+    margin-bottom: 20px;
+}
+
+div {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 10px auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
 }
 
 /* ===================================================
-   TRUY VẤN #2: Chế độ xem màn hình lớn (Desktop View)
-   Kích hoạt từ 998px trở lên
+   TRUY VẤN #1: Kích hoạt từ 772px trở lên (Tablet View)
+   =================================================== */
+@media screen and (min-width: 772px) {
+    div {
+        width: 45vw;           /* Chiều rộng bằng 45% viewport width */
+        display: inline-block; /* Xếp các div nằm ngang cạnh nhau */
+        vertical-align: top;   /* Căn thẳng lề trên */
+        margin: 10px 1%;
+    }
+
+    img {
+        max-height: 30vh;      /* Chiều cao hình ảnh không quá 30% viewport height */
+        width: auto;           /* Giữ nguyên tỷ lệ hình ảnh */
+    }
+}
+
+/* ===================================================
+   TRUY VẤN #2: Kích hoạt từ 998px trở lên (Desktop View)
    =================================================== */
 @media screen and (min-width: 998px) {
-  /* Thay đổi chiều rộng div thành 30% chiều rộng khung nhìn (vw) */
-  div {
-    width: 30vw;
-  }
+    div {
+        width: 30vw;           /* Thay đổi chiều rộng div thành 30% viewport width */
+    }
 }
