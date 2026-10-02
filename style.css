@@ -1,0 +1,26 @@
+@media screen and (min-width: 772px) {
+  /* 1. Đặt chiều rộng div bằng 45% chiều rộng khung nhìn (vw) */
+  /* Cần đổi display sang inline-block để các div xếp hàng ngang được */
+  div {
+    width: 45vw;
+    display: inline-block;
+    vertical-align: top; /* Căn lề trên để các hộp đều nhau */
+  }
+
+  /* 2. Giới hạn chiều cao tối đa của hình ảnh không quá 30% chiều cao khung nhìn (vh) */
+  img {
+    max-height: 30vh;
+    width: auto; /* Giữ nguyên tỷ lệ hình ảnh */
+  }
+}
+
+/* ===================================================
+   TRUY VẤN #2: Chế độ xem màn hình lớn (Desktop View)
+   Kích hoạt từ 998px trở lên
+   =================================================== */
+@media screen and (min-width: 998px) {
+  /* Thay đổi chiều rộng div thành 30% chiều rộng khung nhìn (vw) */
+  div {
+    width: 30vw;
+  }
+}
